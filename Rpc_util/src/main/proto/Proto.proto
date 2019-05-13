@@ -1,0 +1,23 @@
+syntax = "proto2";
+option java_package = "nanhui.wang.util";
+option java_outer_classname = "RpcUtil";
+import "google/protobuf/any.proto";
+message RpcRequestProto {
+    required string requestId = 1;
+    required string className = 2;
+    required string methodName = 3;
+    required Request request = 4;
+}
+message Request {
+    required string requestPar = 1;
+
+
+}
+
+
+message RpcResponseProto {
+    required string responseId = 1;
+    required string responseCost = 2;
+    required string responseResult = 3;
+
+}
